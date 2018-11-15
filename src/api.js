@@ -9,7 +9,7 @@ const instance = axios.create({
 export default {
     searchUser(username) {
         return instance
-            .get(`/user/${username}`)
+            .get(`/users/${username}`)
             .then(result => result.data)
     }
 }

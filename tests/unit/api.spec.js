@@ -8,7 +8,7 @@ describe('api', () => {
         const expectedUser = 'kuroski';
 
         const request = nock('https://api.github.com')
-            .get(`/user/${expectedUser}`)
+            .get(`/users/${expectedUser}`)
             .reply(200, userFixture);
 
         const result = await api.searchUser(expectedUser);
